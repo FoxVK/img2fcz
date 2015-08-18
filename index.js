@@ -2,7 +2,8 @@ var self = require('sdk/self');
 
 var contextMenu = require("sdk/context-menu");
  var menuItem = contextMenu.Item({
-  label: "na furry.cz",
+  label: "Generuj kód pro furry.cz",
+  image: 'http://www.furry.cz/furrycz.ico',
   context: contextMenu.SelectorContext("img"),
   contentScript: 'self.on("click", function (node) {' +
                  '  self.postMessage(node.clientWidth +"|"+ node.clientHeight+"|"+node.src+"|"+node.ownerDocument.location);' +
