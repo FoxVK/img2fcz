@@ -1,0 +1,13 @@
+{
+  "title": "Image to f.cz",
+  "name": "img2fcz",
+  "version": "0.0.1",
+  "description": "Unsnadňuje vkládání obrázků.",
+  "main": "index.js",
+  "author": "fox@vsetin.org",
+  "engines": {
+    "firefox": ">=38.0a1",
+    "fennec": ">=38.0a1"
+  },
+  "license": "MIT"
+}
