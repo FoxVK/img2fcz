@@ -10,8 +10,8 @@ var contextMenu = require("sdk/context-menu");
                  '});',
   onMessage: function (args) { 
 	
-	var maxW = 600;
-	var maxH = 500;
+	var maxW = require('sdk/simple-prefs').prefs['maxWidth'];
+	var maxH = require('sdk/simple-prefs').prefs['maxHeight'];;
 	     	
 	var s = args.split("|");
 
@@ -43,6 +43,15 @@ var contextMenu = require("sdk/context-menu");
 	
 	var clipboard = require("sdk/clipboard");
 	clipboard.set(code, "text");
+	
+	if(require('sdk/simple-prefs').prefs['showNotify'])
+	{
+		var notifications = require("sdk/notifications");
+		notifications.notify({
+		  text: "Kód pro furry.cz zkopírován do schránky.",
+		  title: "Obrázky do furry.cz"
+		});
+	}
   }
 });
 

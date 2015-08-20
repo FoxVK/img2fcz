@@ -1,15 +1,37 @@
 {
   "title": "Obrázky do furry.cz",
   "name": "img2fcz",
-  "version": "0.0.2",
-  "description": "Plugin pro usnadnění vkládání obrázků do furry.cz",
+  "version": "1.0.0",
+  "description": "Plugin pro usnadnění vkládání obrázků do furry.cz. (Useful only for users of furry.cz website)",
   "main": "index.js",
-  "author": "fox@vsetin.org",
+  "author": "ziky@vsetin.org",
   "engines": {
-    "firefox": ">=36",
-    "fennec": ">=36"
+    "firefox": ">=36.0"
   },
   "license": "MIT",
   "homepage" : "http://www.furry.cz/index.php?s=f&a=rm&t=561",
-  "id": "img2fcz@vsetin.org" 
+  "id": "img2f.cz@vsetin.org", 
+
+  "preferences": [{
+		"name": "maxWidth",
+		"title": "Maximální šířka obrázku",
+		"description": "Šířka (width) v px na kterou bude obrázek zmenšen pokud ji překročí",
+		"type": "integer",
+		"value": 600
+	},
+	{
+		"name": "maxHeight",
+		"title": "Maximální výška obrázku",
+		"description": "Výška (height) v px na kterou bude obrázek zmenšen pokud ji překročí",
+		"type": "integer",
+		"value": 500
+	},
+	{
+		"name": "showNotify",
+		"title": "Zobrazit upozornění",
+		"description": "Zobrazit upozornění o vložení kódu do schránky",
+		"type": "bool",
+		"value": true
+	}]
 }
+
