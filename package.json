@@ -1,7 +1,7 @@
 {
   "title": "Obrázky do furry.cz",
   "name": "img2fcz",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Plugin pro usnadnění vkládání obrázků do furry.cz. (Useful only for users of furry.cz website)",
   "main": "index.js",
   "author": "ziky@vsetin.org",

@@ -24,20 +24,29 @@ var contextMenu = require("sdk/context-menu");
 	
 	var sizeLim = "";
 	
-	if((maxW/w) > (maxH/h))
-	{
-		if(maxW<w)
-		{
-			sizeLim=" width="+maxW;
-		} 
-	}
-	else
-	{
-		if(maxH<h)
-		{
-			sizeLim=" height="+maxH;
-		}
-	}
+	if((w/h) > (maxW/maxH))
+        {
+                if(maxW<w)
+                {
+                        sizeLim=" width="+maxW;
+                }
+                else
+                {
+                        sizeLim=" width="+w;
+                }
+        }
+        else
+        {
+                if(maxH<h)
+                {
+                        sizeLim=" height="+maxH;
+                }
+                else
+                {
+                        sizeLim=" height="+h;
+                }
+        }
+
 	
 	var code = '<a href='+pg+'><img src='+src+sizeLim+'><br>'+pg+'</a>'
 	
